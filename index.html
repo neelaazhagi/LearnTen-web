@@ -11,16 +11,41 @@
 </head>
 <body>
 
-  <!-- Navbar -->
- <header class="navbar">
+<!-- ============================= -->
+<!-- NAVBAR -->
+<!-- ============================= -->
+
+<header class="navbar">
   <div class="logo">
     <img src="assets/LearnTen-logo.png" alt="LearnTen Logo">
     <span>LearnTen</span>
-  </div> 
-
+  </div>
 
   <!-- Desktop Menu -->
-<nav class="desktop-menu">
+  <nav class="desktop-menu">
+    <ul>
+      <li class="nav-item">The Learning Path</li>
+      <li class="nav-item">Inside the Lab</li>
+      <li class="nav-item">Buildroom</li>
+      <li class="nav-item">AI Edge</li>
+      <li class="nav-item">Mentor Circle</li>
+      <li class="nav-item">Student Stories</li>
+    </ul>
+    <button class="join-btn">Join Next Batch</button>
+  </nav>
+
+  <!-- Mobile Menu Button -->
+  <div class="menu-btn" id="menuBtn">&#9776;</div>
+</header>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+
+<!-- Side Menu -->
+<nav class="side-menu" id="sideMenu">
+  <div class="close-btn" id="closeBtn">&times;</div>
+  <h4 class="menu-heading">Explore LearnTen</h4>
+
   <ul>
     <li class="nav-item">The Learning Path</li>
     <li class="nav-item">Inside the Lab</li>
@@ -29,37 +54,18 @@
     <li class="nav-item">Mentor Circle</li>
     <li class="nav-item">Student Stories</li>
   </ul>
+
   <button class="join-btn">Join Next Batch</button>
 </nav>
 
 
-  <!-- Mobile Menu Button -->
-  <div class="menu-btn" id="menuBtn">&#9776;
+ <!-- ============================= -->
+<!-- HERO SECTION -->
+<!-- ============================= -->
 
-  </div>
-</header>
-
-  <!-- Slide Menu -->
-  <div class="overlay" id="overlay"></div>
-
-  <nav class="side-menu" id="sideMenu">
-    <div class="close-btn" id="closeBtn">&times;</div>
-    <h4 class="menu-heading">Explore Learnten</h4>
-   <ul>
-  <li class="nav-item">The Learning Path</li>
-  <li class="nav-item">Inside the Lab</li>
-  <li class="nav-item">Buildroom</li>
-  <li class="nav-item">AI Edge</li>
-  <li class="nav-item">Mentor Circle</li>
-  <li class="nav-item">Student Stories</li>
-</ul>
-    <button class="join-btn">Join the Next Batch</button>
-  </nav>
-
-  <!-- Hero Section -->
- <section class="hero">
+<section class="hero">
   <div class="hero-container">
-    
+
     <!-- Left Content -->
     <div class="hero-text">
       <span class="hero-badge">AI-Powered Learning Platform</span>
@@ -78,68 +84,73 @@
   </div>
 </section>
 
-<!-- Learning Journey Section -->
+
+<!-- ============================= -->
+<!-- LEARNING JOURNEY SECTION -->
+<!-- ============================= -->
+
 <section class="journey">
   <div class="container">
+
     <h2 class="journey-title">Your Learning Journey</h2>
     <p class="journey-subtitle">
       A structured path from zero coding knowledge to job-ready developer.
       Each milestone builds on the last.
     </p>
 
-   <div class="journey-grid">
+    <div class="journey-grid">
 
-  <div class="journey-card highlight" data-step="1">
-  <span class="card-corner-icon">📘</span>
-  <div class="step">1</div>
-  <h3>Foundations</h3>
-  <p>HTML, CSS, JavaScript basics. Build your first web apps.</p>
-</div>
+      <div class="journey-card highlight" data-step="1">
+        <span class="card-corner-icon">📘</span>
+        <div class="step">1</div>
+        <h3>Foundations</h3>
+        <p>HTML, CSS, JavaScript basics. Build your first web apps.</p>
+      </div>
 
+      <div class="journey-card" data-step="2">
+        <span class="card-corner-icon">⚛️</span>
+        <div class="step">2</div>
+        <h3>Core Skills</h3>
+        <p>React fundamentals, components & state management.</p>
+      </div>
 
- <div class="journey-card" data-step="2">
-  <span class="card-corner-icon">⚛️</span>
-  <div class="step">2</div>
-  <h3>Core Skills</h3>
-  <p>React fundamentals, components & state management.</p>
-</div>
+      <div class="journey-card" data-step="3">
+        <span class="card-corner-icon">🚀</span>
+        <div class="step">3</div>
+        <h3>Real Projects</h3>
+        <p>Build 3 real-world applications.</p>
+      </div>
 
+      <div class="journey-card" data-step="4">
+        <span class="card-corner-icon">🤖</span>
+        <div class="step">4</div>
+        <h3>AI Integration</h3>
+        <p>Use AI APIs and build AI-powered features.</p>
+      </div>
 
-  <div class="journey-card" data-step="3">
-  <span class="card-corner-icon">🚀</span>
-  <div class="step">3</div>
-  <h3>Real Projects</h3>
-  <p>Build 3 real-world applications.</p>
-</div>
+      <div class="journey-card" data-step="5">
+        <span class="card-corner-icon">🎯</span>
+        <div class="step">5</div>
+        <h3>Portfolio</h3>
+        <p>Create a stunning developer portfolio.</p>
+      </div>
 
+      <div class="journey-card" data-step="6">
+        <span class="card-corner-icon">💼</span>
+        <div class="step">6</div>
+        <h3>Interviews</h3>
+        <p>Mock interviews, resume prep & placement support.</p>
+      </div>
 
-  <div class="journey-card" data-step="4">
-  <span class="card-corner-icon">🤖</span>
-  <div class="step">4</div>
-  <h3>AI Integration</h3>
-  <p>Use AI APIs and build AI-powered features.</p>
-</div>
+    </div>
 
+  </div>
+</section>
 
-  <div class="journey-card" data-step="5">
-  <span class="card-corner-icon">🎯</span>
-  <div class="step">5</div>
-  <h3>Portfolio</h3>
-  <p>Create a stunning developer portfolio.</p>
-</div>
+<!-- ============================= -->
+<!-- JOURNEY DETAILS SECTION -->
+<!-- ============================= -->
 
-  <div class="journey-card" data-step="6">
-  <span class="card-corner-icon">💼</span>
-  <div class="step">6</div>
-  <h3>Interviews</h3>
-  <p>Mock interviews, resume prep & placement support.</p>
-</div>
-
-
-</div>
-
-
-<!-- Journey Details Section -->
 <section class="journey-details" id="journeyDetails">
   <div class="details-card">
 
@@ -166,11 +177,10 @@
   </div>
 </section>
 
+<!-- ============================= -->
+<!-- FEATURES SECTION -->
+<!-- ============================= -->
 
-  </div>
-</section>
-
-<!-- Why LearnTen Section -->
 <section class="features">
   <div class="container">
 
@@ -181,7 +191,6 @@
     </p>
 
     <div class="features-grid">
-
       <div class="feature-card">
         <div class="feature-icon">👥</div>
         <h3>Small Batches</h3>
@@ -205,54 +214,61 @@
         <h3>Mentor-Led Growth</h3>
         <p>Industry mentors guide you through reviews & career prep.</p>
       </div>
-
     </div>
 
   </div>
 </section>
 
+
+<!-- ============================= -->
 <!-- METRICS SECTION -->
+<!-- ============================= -->
+
 <section class="metrics">
   <div class="metrics-grid">
-    
+
+    <!-- Metric 1 -->
     <div class="metric-card">
       <div class="metric-icon">📅</div>
-      <h3><span class="counter" data-target="10">0</span>+</h3>
+      <h3>
+        <span class="counter" data-target="10">0</span><span class="plus">+</span>
+      </h3>
       <p>Years of Experience</p>
     </div>
 
+    <!-- Metric 2 -->
     <div class="metric-card">
       <div class="metric-icon">🎯</div>
-      <h3><span class="counter" data-target="500">0</span>+</h3>
-      <p>Based Training</p>
+      <h3>
+        <span class="counter" data-target="500">0</span><span class="plus">+</span>
+      </h3>
+      <p>Project-Based Training</p>
     </div>
 
+    <!-- Metric 3 -->
     <div class="metric-card">
       <div class="metric-icon">👨‍🏫</div>
-      <h3>1:<span class="counter" data-target="5">0</span></h3>
+      <h3>
+       <span class="prefix">1:</span><span class="counter" data-target="5">0</span>
+      </h3>
       <p>Mentor Ratio</p>
     </div>
 
   </div>
 </section>
 
+
+
 <!-- ============================= -->
 <!-- TEACHING METHODOLOGY SECTION -->
 <!-- ============================= -->
 
 <section class="methodology">
-
   <div class="container">
 
-    <!-- Badge -->
-    <span class="methodology-badge">
-      ⚡ Teaching Methodology
-    </span>
+    <span class="methodology-badge">⚡ Teaching Methodology</span>
 
-    <!-- Title -->
-    <h2 class="methodology-title">
-      Inside the LearnTen Lab
-    </h2>
+    <h2 class="methodology-title">Inside the LearnTen Lab</h2>
 
     <p class="methodology-subtitle">
       See how learning actually happens here.
@@ -260,7 +276,7 @@
       just pure hands-on coding.
     </p>
 
-    <!-- 4 Core Cards -->
+    <!-- Lab Cards -->
     <div class="lab-grid">
 
       <div class="lab-card">
@@ -289,106 +305,91 @@
 
     </div>
 
+
     <!-- Week Section -->
-<div class="week-section">
+    <div class="week-section">
 
-  <h3 class="week-title">📅 A Week in LearnTen</h3>
+      <h3 class="week-title">📅 A Week in LearnTen</h3>
 
-  <div class="week-grid">
+      <div class="week-grid">
 
-    <div class="week-card">
-      <h4>Monday</h4>
-      <h5>Core Concepts</h5>
-      <p>Learn fundamentals with visual representation.</p>
+        <div class="week-card">
+          <h4>Monday</h4>
+          <h5>Core Concepts</h5>
+          <p>Learn fundamentals with visual representation.</p>
+        </div>
+
+        <div class="week-card">
+          <h4>Tuesday</h4>
+          <h5>Practice Lab</h5>
+          <p>Hands-on coding exercises to strengthen skills.</p>
+        </div>
+
+        <div class="week-card">
+          <h4>Wednesday</h4>
+          <h5>Build Day</h5>
+          <p>Apply skills to real-world feature development.</p>
+        </div>
+
+        <div class="week-card">
+          <h4>Thursday</h4>
+          <h5>AI Integration</h5>
+          <p>Learn AI-assisted modern development workflow.</p>
+        </div>
+
+        <div class="week-card">
+          <h4>Friday</h4>
+          <h5>Code Review</h5>
+          <p>Peer reviews and mentor feedback sessions.</p>
+        </div>
+
+        <div class="week-card">
+          <h4>Saturday</h4>
+          <h5>Project Work</h5>
+          <p>Build a portfolio-ready real-world project.</p>
+        </div>
+
+      </div>
     </div>
 
-    <div class="week-card">
-      <h4>Tuesday</h4>
-      <h5>Practice Lab</h5>
-      <p>Hands-on coding exercises to strengthen skills.</p>
+
+    <!-- Tools Section -->
+    <div class="tools-section">
+
+      <h3 class="tools-title">🛠 Tools You'll Master</h3>
+      <p class="tools-subtitle">
+        Industry-standard tools that companies use — not outdated tech here!
+      </p>
+
+      <div class="tools-grid">
+        <span><i class="devicon-vscode-plain colored"></i> VS Code</span>
+        <span><i class="devicon-react-original colored"></i> React</span>
+        <span><i class="devicon-github-original"></i> GitHub</span>
+        <span><i class="devicon-github-original colored"></i> AI Copilot</span>
+        <span><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+        <span><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+        <span><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</span>
+        <span><i class="devicon-figma-plain colored"></i> Figma</span>
+      </div>
+
     </div>
 
-    <div class="week-card">
-      <h4>Wednesday</h4>
-      <h5>Build Day</h5>
-      <p>Apply skills to real-world feature development.</p>
-    </div>
 
-    <div class="week-card">
-      <h4>Thursday</h4>
-      <h5>AI Integration</h5>
-      <p>Learn AI-assisted modern development workflow.</p>
-    </div>
-
-    <div class="week-card">
-      <h4>Friday</h4>
-      <h5>Code Review</h5>
-      <p>Peer reviews and mentor feedback sessions.</p>
-    </div>
-
-    <div class="week-card">
-      <h4>Saturday</h4>
-      <h5>Project Work</h5>
-      <p>Build a portfolio-ready real-world project.</p>
+    <!-- No Theory Strip -->
+    <div class="no-theory-strip">
+      <div class="no-theory-content">
+        <span class="no-theory-icon">✔</span>
+        <span class="no-theory-heading">
+          No Theory Without Implementation
+        </span>
+      </div>
+      <p class="no-theory-subtext">
+        Every concept you learn is immediately applied in real code.
+      </p>
     </div>
 
   </div>
-
-</div>
-
-
-
- 
-
-<!-- Tools Section -->
-<div class="tools-section">
-
-  <h3 class="tools-title">🛠 Tools You'll Master</h3>
-  <p class="tools-subtitle">Industry-standard tools that companies use — not outdated tech here!</p>
-
- <div class="tools-grid">
-
-  <span><i class="devicon-vscode-plain colored"></i> VS Code</span>
-
-  <!-- FIXED React Icon -->
-  <span><i class="devicon-react-original colored"></i> React</span>
-
-  <span><i class="devicon-github-original"></i> GitHub</span>
-
-  <!-- FIXED AI Copilot (Use OpenAI or GitHub Copilot style) -->
-  <span><i class="devicon-github-original colored"></i> AI Copilot</span>
-
-  <span><i class="devicon-nodejs-plain colored"></i> Node.js</span>
-
-  <span><i class="devicon-typescript-plain colored"></i> TypeScript</span>
-
-  <span><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</span>
-
-  <span><i class="devicon-figma-plain colored"></i> Figma</span>
-
-</div>
-
-
-
-</div>
-
-<!-- No Theory Highlight -->
-<div class="no-theory-strip">
-
-  <div class="no-theory-content">
-    <span class="no-theory-icon">✔</span>
-    <span class="no-theory-heading">
-      No Theory Without Implementation
-    </span>
-  </div>
-
-  <p class="no-theory-subtext">
-    Every concept you learn is immediately applied in real code.
-  </p>
-
-</div>
-
-
+</section>
 
 <!-- ============================= -->
 <!-- BUILDROOM SECTION -->
@@ -1068,7 +1069,7 @@
 
   </div>
 
-</section>
+
 
   <div class="stories-final-cta">
   <p class="final-cta-text">Your story could be next.</p>
@@ -1076,6 +1077,7 @@
     Write Your Story →
   </a>
 </div>
+</section>
 
 
 <section class="choose-path">

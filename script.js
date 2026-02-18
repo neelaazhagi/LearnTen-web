@@ -156,3 +156,24 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+const container = document.querySelector(".stories-container");
+
+let scrollAmount = 0;
+
+function autoScroll() {
+  if (window.innerWidth <= 768) {
+    scrollAmount += 0.5; // smooth speed
+    container.scrollLeft = scrollAmount;
+
+    if (scrollAmount >= container.scrollWidth - container.clientWidth) {
+      scrollAmount = 0;
+    }
+  }
+}
+
+setInterval(autoScroll, 20);
+
+
+
+
