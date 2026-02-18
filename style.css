@@ -127,7 +127,7 @@ body {
 
 .menu-btn span {
   width: 26px;
-  height: 3.5px;   /* increased thickness */
+  height: 3.5px;  
   background: #ffffff;
   border-radius: 3px;
 }
@@ -441,7 +441,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   padding: 0 10px;        /* ADD THIS corener adjust */
-  box-sizing: border-box; /* ADD THIS */
+  box-sizing: border-box; 
 }
 
 }
@@ -506,7 +506,7 @@ body {
   flex-wrap: wrap;
   justify-content: center; /* center cards horizontally */
   gap: 0px;
-  padding: 20px 10px 40px; /* reduce top padding from 40px → 20px */
+  padding: 20px 10px 40px; 
   text-align: center;
 }
 
@@ -514,7 +514,7 @@ body {
 .details-card {
   width: 400px;
   max-width: 100%;
-  margin: 0 auto;   /* 🔥 THIS CENTERS THE CARD */
+  margin: 0 auto;   
   padding: 20px;
   border-radius: 16px;
   background: #0f172a;
@@ -533,7 +533,7 @@ body {
 
 /* Emoji icon */
 .details-icon {
-  font-size: 30px;           /* slightly smaller */
+  font-size: 30px;          
   margin-bottom: 12px;
   transition: transform 0.3s ease, text-shadow 0.3s ease;
   display: inline-block;
@@ -542,22 +542,22 @@ body {
 /* Emoji hover glow (same as journey section) */
 .details-card:hover .details-icon,
 .details-card:active .details-icon {
-  transform: scale(1.1); /* slight zoom */
+  transform: scale(1.1); 
   text-shadow:
     0 0 4px #22d3ee,
     0 0 8px #22d3ee,
-    0 0 12px #22d3ee; /* subtle glow */
+    0 0 12px #22d3ee; 
 }
 
 .details-card h2 {
-  font-size: 22px;   /* smaller heading */
+  font-size: 22px;   
   font-weight: 600;
   margin-bottom: 10px;
   color: #ffffff;
 }
 
 .details-card p {
-  font-size: 13px;   /* smaller text */
+  font-size: 13px;  
   color: #b8c4d6;
   margin: 10px 0 15px;
   line-height: 1.4;
@@ -584,7 +584,7 @@ body {
 }
 
 .tag:hover {
-  background: rgba(0,103,182,0.25); /* light hover, no saffron */
+  background: rgba(0,103,182,0.25); 
   color: #4db3ff;
   border-color: rgba(0,103,182,0.4);
 }
@@ -608,7 +608,7 @@ body {
 }
 
 .learn-more:hover {
-  color: #22d3ee; /* subtle blue hover */
+  color: #22d3ee; 
 }
 
 /* ============================= */
@@ -629,7 +629,7 @@ body {
   }
 
   .details-icon {
-    font-size: 24px; /* smaller emoji */
+    font-size: 24px; 
   }
 
   .details-card h2 {
@@ -767,12 +767,12 @@ body {
 
 /* Make the + sign saffron */
 .metric-card h3 .plus {
-  color: #FC9114; /* saffron */
+  color: #FC9114; 
 }
 
 /* Make the 1: in Mentor Ratio saffron */
 .metric-card h3 span:first-child {
-  color: #FC9114; /* saffron */
+  color: #FC9114; 
 }
 
 /* ============================= */
@@ -921,20 +921,20 @@ body {
   }
 
   .lab-card {
-    padding: 15px 12px;      /* smaller card */
+    padding: 15px 12px;     
     border-radius: 14px;
     display: block;
   }
 
   .lab-card h3 {
     font-size: 16px;
-    margin-bottom: 10px; /* add space below heading */
+    margin-bottom: 10px; 
   }
 
   .lab-card p {
     font-size: 12px;
     line-height: 1.4;
-    margin-top: 6px; /* optional: adds extra spacing above description */
+    margin-top: 6px; 
   }
 
   .lab-icon {
@@ -954,7 +954,7 @@ body {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 30px;
-  margin-top: 50px; /* Add this line to create space above the Week section */
+  margin-top: 50px; 
 }
 .week-grid {
   display: grid;
@@ -993,24 +993,24 @@ body {
 
 /* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
-  width: auto;      /* default width */
-  height: auto;     /* default height for horizontal scroll */
+  width: auto;      
+  height: auto;   
 }
 
 ::-webkit-scrollbar-track {
-  background: auto; /* default track */
+  background: auto; 
 }
 
 ::-webkit-scrollbar-thumb {
-  background: auto; /* default thumb */
+  background: auto; 
   box-shadow: none;
   border-radius: 0;
 }
 
 /* Firefox */
 html {
-  scrollbar-width: auto;          /* default width */
-  scrollbar-color: auto auto;     /* default thumb and track */
+  scrollbar-width: auto;
+  scrollbar-color: auto auto;    
 }
 
 
@@ -1191,7 +1191,7 @@ html {
   border-radius: 16px;
   text-align: left;
   border: 1px solid rgba(255,255,255,0.08);
-  transition: transform 0.3s ease; /* removed box-shadow */
+  transition: transform 0.3s ease;
 }
 
 .build-card h3 {
@@ -1356,7 +1356,7 @@ html {
 }
 
 .transformation-title {
-  font-size: 25px;  /* slightly smaller */
+  font-size: 25px; 
   font-weight: 700;
   margin-bottom: 10px;
   color: #FC9114;
@@ -1401,7 +1401,7 @@ html {
 }
 
 .before-list {
-  list-style: none;   /* remove default bullets */
+  list-style: none; 
   padding-left: 0;
 }
 
@@ -1635,7 +1635,7 @@ html {
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   margin: 80px 0;
-  align-items: stretch; /* ensures all grid items stretch to same height */
+  align-items: stretch; 
 }
 
 /* Card */
