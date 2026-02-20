@@ -11,7 +11,6 @@
 </head>
 <body>
 
-
 <!-- ============================= -->
 <!-- NAVBAR -->
 <!-- ============================= -->
@@ -25,12 +24,12 @@
   <!-- Desktop Menu -->
   <nav class="desktop-menu">
     <ul>
-      <li class="nav-item">The Learning Path</li>
-      <li class="nav-item">Inside the Lab</li>
-      <li class="nav-item">Buildroom</li>
-      <li class="nav-item">AI Edge</li>
-      <li class="nav-item">Mentor Circle</li>
-      <li class="nav-item">Student Stories</li>
+      <li class="nav-item"><a href="#journey">The Learning Path</a></li>
+      <li class="nav-item"><a href="#methodology">Inside the Lab</a></li>
+      <li class="nav-item"><a href="#buildroom">Buildroom</a></li>
+      <li class="nav-item"><a href="#ai-edge">AI Edge</a></li>
+      <li class="nav-item"><a href="#mentor-circle">Mentor Circle</a></li>
+      <li class="nav-item"><a href="#student-stories">Student Stories</a></li>
     </ul>
     <button class="join-btn">Join Next Batch</button>
   </nav>
@@ -48,12 +47,12 @@
   <h4 class="menu-heading">Explore LearnTen</h4>
 
   <ul>
-    <li class="nav-item">The Learning Path</li>
-    <li class="nav-item">Inside the Lab</li>
-    <li class="nav-item">Buildroom</li>
-    <li class="nav-item">AI Edge</li>
-    <li class="nav-item">Mentor Circle</li>
-    <li class="nav-item">Student Stories</li>
+    <li class="nav-item"><a href="#journey">The Learning Path</a></li>
+    <li class="nav-item"><a href="#methodology">Inside the Lab</a></li>
+    <li class="nav-item"><a href="#buildroom">Buildroom</a></li>
+    <li class="nav-item"><a href="#ai-edge">AI Edge</a></li>
+    <li class="nav-item"><a href="#mentor-circle">Mentor Circle</a></li>
+    <li class="nav-item"><a href="#student-stories">Student Stories</a></li>
   </ul>
 
   <button class="join-btn">Join Next Batch</button>
@@ -86,96 +85,100 @@
 </section>
 
 
-<!-- ============================= -->
-<!-- LEARNING JOURNEY SECTION -->
-<!-- ============================= -->
-
 <section class="journey">
-  <div class="container">
 
-    <h2 class="journey-title">Your Learning Journey</h2>
-    <p class="journey-subtitle">
-      A structured path from zero coding knowledge to job-ready developer.
-      Each milestone builds on the last.
-    </p>
+  <h2 class="title">Your Learning Journey</h2>
 
-    <div class="journey-grid">
+  <div class="journey-wrapper">
 
-      <div class="journey-card highlight" data-step="1">
-        <span class="card-corner-icon">📘</span>
-        <div class="step">1</div>
-        <h3>Foundations</h3>
-        <p>HTML, CSS, JavaScript basics. Build your first web apps.</p>
+    <!-- LEFT SIDE -->
+    <div class="journey-container">
+
+      <div class="progress-line">
+        <div class="progress-fill" id="progressFill"></div>
       </div>
 
-      <div class="journey-card" data-step="2">
-        <span class="card-corner-icon">⚛️</span>
-        <div class="step">2</div>
-        <h3>Core Skills</h3>
-        <p>React fundamentals, components & state management.</p>
-      </div>
+      <div class="steps">
 
-      <div class="journey-card" data-step="3">
-        <span class="card-corner-icon">🚀</span>
-        <div class="step">3</div>
-        <h3>Real Projects</h3>
-        <p>Build 3 real-world applications.</p>
-      </div>
+        <div class="journey-step active" data-step="0">
+          <div class="circle">
+            <span class="main-icon">📘</span>
+            <span class="step-badge">1</span>
+          </div>
+          <p>Foundation</p>
+        </div>
 
-      <div class="journey-card" data-step="4">
-        <span class="card-corner-icon">🤖</span>
-        <div class="step">4</div>
-        <h3>AI Integration</h3>
-        <p>Use AI APIs and build AI-powered features.</p>
-      </div>
+        <div class="journey-step" data-step="1">
+          <div class="circle">
+            <span class="main-icon">⚛️</span>
+            <span class="step-badge">2</span>
+          </div>
+          <p>Core Skills</p>
+        </div>
 
-      <div class="journey-card" data-step="5">
-        <span class="card-corner-icon">🎯</span>
-        <div class="step">5</div>
-        <h3>Portfolio</h3>
-        <p>Create a stunning developer portfolio.</p>
-      </div>
+        <div class="journey-step" data-step="2">
+          <div class="circle">
+            <span class="main-icon">🚀</span>
+            <span class="step-badge">3</span>
+          </div>
+          <p>Real Projects</p>
+        </div>
 
-      <div class="journey-card" data-step="6">
-        <span class="card-corner-icon">💼</span>
-        <div class="step">6</div>
-        <h3>Interviews</h3>
-        <p>Mock interviews, resume prep & placement support.</p>
-      </div>
+        <div class="journey-step" data-step="3">
+          <div class="circle">
+            <span class="main-icon">🤖</span>
+            <span class="step-badge">4</span>
+          </div>
+          <p>AI Integration</p>
+        </div>
 
+        <div class="journey-step" data-step="4">
+          <div class="circle">
+            <span class="main-icon">🎯</span>
+            <span class="step-badge">5</span>
+          </div>
+          <p>Portfolio</p>
+        </div>
+
+        <div class="journey-step" data-step="5">
+          <div class="circle">
+            <span class="main-icon">💼</span>
+            <span class="step-badge">6</span>
+          </div>
+          <p>Interviews</p>
+        </div>
+
+      </div>
     </div>
-
-  </div>
-</section>
 
 <!-- ============================= -->
-<!-- JOURNEY DETAILS SECTION -->
+<!-- JOURNEY DETAIL CARD (UPDATED) -->
 <!-- ============================= -->
 
-<section class="journey-details" id="journeyDetails">
-  <div class="details-card">
+<div class="journey-details-card">
 
-    <div class="details-icon" id="detailsIcon">💡</div>
+  <!-- LEFT SIDE -->
+  <div class="detail-left">
+    <div class="week-label" id="detailWeek">WEEK 1–2</div>
+    <h2 id="detailTitle">Foundations</h2>
+    <p id="detailDesc">HTML, CSS, JS fundamentals with hands-on exercises</p>
 
-    <h2 id="detailsTitle">AI Integration</h2>
-
-    <p id="detailsDescription">
-      Learn to use AI tools, APIs and build AI-powered features.
-    </p>
-
-    <div class="details-tags" id="detailsTags">
-      <span class="tag">Prompt Engineering</span>
-      <span class="tag">OpenAI APIs</span>
-      <span class="tag">AI-assisted Coding</span>
-      <span class="tag">Building Agents</span>
-    </div>
-
-    <div class="details-footer">
-      <span id="detailsWeeks">Week 10–11</span>
-      <a href="#" class="learn-more">Learn More →</a>
-    </div>
-
+   
   </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="detail-right">
+    <h4>WHAT YOU’LL LEARN</h4>
+    <ul id="detailList">
+      <li>Semantic HTML & modern CSS layouts</li>
+      <li>JavaScript ES6+ deep dive</li>
+      <li>Git & GitHub workflow mastery</li>
+      <li>First mini-projects shipped</li>
+    </ul>
+  </div>
+
+</div>
+
 </section>
 
 <!-- ============================= -->
@@ -193,26 +196,35 @@
 
     <div class="features-grid">
       <div class="feature-card">
+        <div class="card-header">
         <div class="feature-icon">👥</div>
         <h3>Small Batches</h3>
+        </div>
         <p>Only 10–15 students per batch. Personal attention guaranteed.</p>
       </div>
 
       <div class="feature-card">
+         <div class="card-header">
+   
         <div class="feature-icon">💻</div>
         <h3>Real Code, Real Projects</h3>
+        </div>
         <p>No fake tutorials. Build real apps solving real problems.</p>
       </div>
 
       <div class="feature-card">
+        <div class="card-header">
         <div class="feature-icon">🤖</div>
         <h3>AI-First Learning</h3>
+        </div>
         <p>Use Copilot, ChatGPT APIs and build AI-powered features.</p>
       </div>
 
       <div class="feature-card">
+        <div class="card-header">
         <div class="feature-icon">🎓</div>
         <h3>Mentor-Led Growth</h3>
+        </div>
         <p>Industry mentors guide you through reviews & career prep.</p>
       </div>
     </div>
@@ -221,39 +233,6 @@
 </section>
 
 
-<!-- ============================= -->
-<!-- METRICS SECTION -->
-<!-- ============================= -->
-
-<section class="metrics">
-  <div class="metrics-grid">
-
-    <!-- Metric 1 -->
-    <div class="metric-card">
-      <div class="metric-icon">📅</div>
-      <h3>
-        <span class="counter" data-target="10">0</span><span class="plus">+</span>
-      </h3>
-      <p>Years of Experience</p>
-    </div>
-
-    <!-- Metric 2 -->
-    <div class="metric-card">
-      <div class="metric-icon">🎯</div>
-      <h3>
-        <span class="counter" data-target="500">0</span><span class="plus">+</span>
-      </h3>
-      <p>Project-Based Training</p>
-    </div>
-
-    <!-- Metric 3 -->
-    <div class="metric-card">
-      <div class="metric-icon">👨‍🏫</div>
-      <h3>
-       <span class="prefix">1:</span><span class="counter" data-target="5">0</span>
-      </h3>
-      <p>Mentor Ratio</p>
-    </div>
 
   </div>
 </section>
@@ -264,7 +243,7 @@
 <!-- TEACHING METHODOLOGY SECTION -->
 <!-- ============================= -->
 
-<section class="methodology">
+<section class="methodology" id="methodology">
   <div class="container">
 
     <span class="methodology-badge">⚡ Teaching Methodology</span>
@@ -355,25 +334,63 @@
 
 
     <!-- Tools Section -->
-    <div class="tools-section">
+<div class="tools-section">
 
-      <h3 class="tools-title">🛠 Tools You'll Master</h3>
-      <p class="tools-subtitle">
-        Industry-standard tools that companies use — not outdated tech here!
-      </p>
+  <h3 class="tools-title">🛠 Tools You'll Master</h3>
+  <p class="tools-subtitle">
+    Industry-standard tools that companies use — not outdated tech here!
+  </p>
 
-      <div class="tools-grid">
-        <span><i class="devicon-vscode-plain colored"></i> VS Code</span>
-        <span><i class="devicon-react-original colored"></i> React</span>
-        <span><i class="devicon-github-original"></i> GitHub</span>
-        <span><i class="devicon-github-original colored"></i> AI Copilot</span>
-        <span><i class="devicon-nodejs-plain colored"></i> Node.js</span>
-        <span><i class="devicon-typescript-plain colored"></i> TypeScript</span>
-        <span><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</span>
-        <span><i class="devicon-figma-plain colored"></i> Figma</span>
-      </div>
+  <!-- Categories Horizontal -->
+  <div class="tools-categories">
+    <span class="category active" data-category="frontend">Frontend</span>
+    <span class="category" data-category="backend">Backend</span>
+    <span class="category" data-category="database">Database</span>
+    <span class="category" data-category="other">Other Tools</span>
+  </div>
 
+  <!-- Tools Grids -->
+  <div class="tools-grid-wrapper">
+    <!-- FRONTEND -->
+    <div class="tools-grid category-grid" id="frontend">
+      <span><i class="devicon-html5-plain colored"></i> HTML</span>
+      <span><i class="devicon-css3-plain colored"></i> CSS</span>
+      <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+      <span><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+      <span><i class="devicon-bootstrap-plain colored"></i> Bootstrap</span>
+      <span><i class="devicon-materialui-plain colored"></i> Material UI</span>
+      <span><i class="devicon-nextjs-original colored"></i> Next.js</span>
     </div>
+
+    <!-- BACKEND -->
+    <div class="tools-grid category-grid" id="backend">
+      <span><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+      <span><i class="devicon-python-plain colored"></i> Python</span>
+      <span><i class="devicon-django-plain colored"></i> Django</span>
+      <span><i class="devicon-flask-plain colored"></i> Flask</span>
+      <span><i class="devicon-fastapi-plain colored"></i> FastAPI</span>
+      <span><i class="devicon-java-plain colored"></i> Java</span>
+      <span><i class="devicon-spring-plain colored"></i> Spring Boot</span>
+      <span>JWT Auth</span>
+    </div>
+
+    <!-- DATABASE -->
+    <div class="tools-grid category-grid" id="database">
+      <span><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+      <span><i class="devicon-mysql-plain colored"></i> MySQL</span>
+      <span><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
+      <span><i class="devicon-firebase-plain colored"></i> Firebase</span>
+    </div>
+
+    <!-- OTHER TOOLS -->
+    <div class="tools-grid category-grid" id="other">
+      <span><i class="devicon-vscode-plain colored"></i> VS Code</span>
+      <span><i class="devicon-github-original colored"></i> GitHub</span>
+      <span><i class="devicon-github-original colored"></i> AI Copilot</span>
+      <span><i class="devicon-figma-plain colored"></i> Figma</span>
+    </div>
+  </div>
+</div>
 
 
     <!-- No Theory Strip -->
@@ -401,7 +418,7 @@
   <!-- Font Awesome for arrow icon -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <section class="buildroom">
+  <section class="buildroom" id="buildroon">
   <div class="container">
     <span class="buildroom-badge">🚀 Real Projects. Real Impact.</span>
     <h2 class="buildroom-title">The Buildroom</h2>
@@ -681,7 +698,7 @@
 <!-- AI EDGE SECTION -->
 <!-- ============================= -->
 
-<section class="ai-edge">
+<section class="ai-edge" id="ai-edge">
 
   <p class="section-tag">What Makes Us Different</p>
   <h2 class="section-title">The AI Edge</h2>
@@ -818,7 +835,7 @@
 <!-- MENTOR CIRCLE -->
 <!-- ============================= -->
 
-<section class="mentor-circle">
+<section class="mentor-circle" id="mentor-circle">
 
   <div class="mentor-badge">Learn From The Best</div>
 
@@ -941,7 +958,7 @@
 </section>
 
 
-<section class="student-stories">
+<section class="student-stories" id="student-stories">
 
   <div class="stories-badge"> Real Transformations</div>
 
@@ -1071,7 +1088,6 @@
   </div>
 
 
-
   <div class="stories-final-cta">
   <p class="final-cta-text">Your story could be next.</p>
   <a href="#" class="final-cta-btn">
@@ -1079,6 +1095,7 @@
   </a>
 </div>
 </section>
+
 
 
 <section class="choose-path">
