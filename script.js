@@ -1,128 +1,198 @@
+document.addEventListener("DOMContentLoaded", function () {
 
-/* =============================== */
-/* MOBILE MENU */
-/* =============================== */
+  /* =============================== */
+  /* MOBILE MENU */
+  /* =============================== */
 
-const menuBtn = document.getElementById("menuBtn");
+  const menuBtn = document.getElementById("menuBtn");
 const closeBtn = document.getElementById("closeBtn");
 const sideMenu = document.getElementById("sideMenu");
 const overlay = document.getElementById("overlay");
 
-if (menuBtn) {
-  menuBtn.addEventListener("click", () => {
-    sideMenu.style.right = "0";
-    overlay.style.display = "block";
-  });
+function openMenu() {
+  sideMenu.classList.add("active");
+  overlay.classList.add("active");
 }
 
+function closeMenu() {
+  sideMenu.classList.remove("active");
+  overlay.classList.remove("active");
+}
+
+if (menuBtn) menuBtn.addEventListener("click", openMenu);
 if (closeBtn) closeBtn.addEventListener("click", closeMenu);
 if (overlay) overlay.addEventListener("click", closeMenu);
 
-function closeMenu() {
-  sideMenu.style.right = "-300px";
-  overlay.style.display = "none";
-}
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) { // when you scroll down 50px
+    navbar.style.background = '#0e1628'; // darker background
+    navbar.style.boxShadow = '0 4px 10px rgba(0,0,0,0.3)';
+  } else {
+    navbar.style.background = 'transparent'; // original
+    navbar.style.boxShadow = 'none';
+  }
+});
 
 
+
+
+    /* =============================== */
+/* JOURNEY PROGRESS SYSTEM */
 /* =============================== */
-/* JOURNEY CLICK FUNCTIONALITY */
-/* =============================== */
+const steps = document.querySelectorAll(".journey-step");
+const progressFill = document.getElementById("progressFill");
 
-// 1️⃣ Select Elements (ONLY ONCE)
-const cards = document.querySelectorAll(".journey-card");
-const detailsSection = document.getElementById("journeyDetails");
-const title = document.getElementById("detailsTitle");
-const description = document.getElementById("detailsDescription");
-const weeks = document.getElementById("detailsWeeks");
-const tagsContainer = document.getElementById("detailsTags");
-const icon = document.getElementById("detailsIcon");
+const journeyIcons = ["📘","⚛️","🚀","🤖","🎯","💼"];
 
-// 2️⃣ Journey Data
 const journeyData = {
-  1: {
-    icon: "📘",
+  0: {
+    week: "WEEK 1–2",
     title: "Foundations",
-    description: "HTML, CSS, JavaScript basics. Build your first web pages.",
-    weeks: "Week 1–2",
-    tags: ["HTML", "CSS", "JavaScript Basics"]
+    desc: "HTML, CSS, JS fundamentals with hands-on exercises",
+    learn: [
+      "Semantic HTML & modern CSS layouts",
+      "JavaScript ES6+ deep dive",
+      "Git & GitHub workflow mastery",
+      "First mini-projects shipped"
+    ]
+  },
+  1: {
+    week: "WEEK 3–5",
+    title: "Core Skills",
+    desc: "React, TypeScript, and modern tooling mastery",
+    learn: [
+      "React components, props & Hooks mastery",
+      "TypeScript for real-world applications",
+      "Modern tooling (Vite, ESLint, Prettier)",
+      "State management patterns & best practices",
+      "Build scalable UI architecture"
+    ]
   },
   2: {
-    icon: "⚛️",
-    title: "Core Skills",
-    description: "React fundamentals, components, state management.",
-    weeks: "Week 3–5",
-    tags: ["React", "Components", "State"]
+    week: "WEEK 6–8",
+    title: "Real Projects",
+    desc: "Build production-ready applications",
+    learn: [
+      "REST API integration",
+      "Authentication systems",
+      "Deployment workflows",
+      "Performance optimization"
+    ]
   },
   3: {
-    icon: "🚀",
-    title: "Real Projects",
-    description: "Build production-ready apps with real-world features.",
-    weeks: "Week 6–9",
-    tags: ["Fullstack", "APIs", "Deployment"]
+    week: "WEEK 9–10",
+    title: "AI Integration",
+    desc: "Integrate AI into modern web apps",
+    learn: [
+      "OpenAI API integration",
+      "Prompt engineering basics",
+      "AI-powered UI features",
+      "Automation workflows"
+    ]
   },
   4: {
-    icon: "🤖",
-    title: "AI Integration",
-    description: "Learn to use AI tools, APIs and build AI-powered features.",
-    weeks: "Week 10–11",
-    tags: ["Prompt Engineering", "OpenAI APIs", "AI Coding", "Agents"]
+    week: "WEEK 11–12",
+    title: "Portfolio",
+    desc: "Create strong real-world portfolio projects",
+    learn: [
+      "3 major production-grade projects",
+      "GitHub optimization",
+      "Case study writing",
+      "Personal branding"
+    ]
   },
   5: {
-    icon: "🎯",
-    title: "Portfolio",
-    description: "Create a strong portfolio that showcases your skills.",
-    weeks: "Week 12",
-    tags: ["Projects", "GitHub", "Resume"]
-  },
-  6: {
-    icon: "💼",
+    week: "CAREER PHASE",
     title: "Interviews",
-    description: "Mock interviews, resume prep, job applications.",
-    weeks: "Ongoing",
-    tags: ["DSA", "System Design", "HR Prep"]
+    desc: "Prepare for interviews & land your job",
+    learn: [
+      "Resume building",
+      "DSA interview preparation",
+      "Mock interviews",
+      "Job application strategy"
+    ]
   }
 };
 
-// 3️⃣ Add Click Events
-cards.forEach(card => {
-  card.addEventListener("click", () => {
+steps.forEach((step, index) => {
+  step.addEventListener("click", () => {
 
-    const step = card.getAttribute("data-step");
-    const data = journeyData[step];
+    steps.forEach((s, i) => {
+      const icon = s.querySelector(".main-icon");
 
-    if (!data) return;
-
-    // Update content
-    title.textContent = data.title;
-    description.textContent = data.description;
-    weeks.textContent = data.weeks;
-    icon.textContent = data.icon;
-
-    // Clear old tags
-    tagsContainer.innerHTML = "";
-
-    // Add new tags
-    data.tags.forEach(tag => {
-      const span = document.createElement("span");
-      span.className = "tag";
-      span.textContent = tag;
-      tagsContainer.appendChild(span);
+      if (i < index) {
+        s.classList.add("completed");
+        s.classList.remove("active");
+        icon.textContent = "✓";
+      }
+      else if (i === index) {
+        s.classList.add("active");
+        s.classList.remove("completed");
+        icon.textContent = journeyIcons[i];
+      }
+      else {
+        s.classList.remove("active", "completed");
+        icon.textContent = journeyIcons[i];
+      }
     });
 
-    // Show section
-    detailsSection.style.display = "block";
+    // Update progress bar
+    const progress = (index / (steps.length - 1)) * 100;
+    progressFill.style.width = progress + "%";
 
-    // Smooth scroll
-    detailsSection.scrollIntoView({ behavior: "smooth" });
+    // Update detail card
+const data = journeyData[index];
+
+document.getElementById("detailWeek").textContent = data.week;
+document.getElementById("detailTitle").textContent = data.title;
+document.getElementById("detailDesc").textContent = data.desc;
+
+const list = document.getElementById("detailList");
+list.innerHTML = "";
+
+data.learn.forEach(item => {
+  const li = document.createElement("li");
+  li.textContent = item;
+  list.appendChild(li);
+});
   });
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
+/* =============================== */
+/* TOOLS CATEGORY TOGGLE */
+/* =============================== */
+
+const categories = document.querySelectorAll(".category");
+const toolGrids = document.querySelectorAll(".category-grid");
+
+categories.forEach(category => {
+  category.addEventListener("click", () => {
+
+    // Remove active from all tabs
+    categories.forEach(cat => cat.classList.remove("active"));
+
+    // Hide all grids
+    toolGrids.forEach(grid => grid.style.display = "none");
+
+    // Activate clicked tab
+    category.classList.add("active");
+
+    // Show selected grid
+    const selected = category.getAttribute("data-category");
+    document.getElementById(selected).style.display = "flex";
+  });
+});
+
+  /* =============================== */
+  /* COUNTER ANIMATION */
+  /* =============================== */
 
   const counters = document.querySelectorAll(".counter");
 
-  const animateCounter = (counter) => {
+  function animateCounter(counter) {
     const target = +counter.getAttribute("data-target");
     let count = 0;
 
@@ -139,41 +209,48 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     updateCount();
-  };
+  }
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      const counter = entry.target;
+  if (counters.length > 0) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.innerText = "0";
+          animateCounter(entry.target);
+        }
+      });
+    }, { threshold: 0.6 });
 
-      if (entry.isIntersecting) {
-        counter.innerText = "0"; // reset to 0 every time
-        animateCounter(counter);
-      }
+    counters.forEach(counter => {
+      observer.observe(counter);
     });
-  }, { threshold: 0.6 });
+  }
 
-  counters.forEach(counter => {
-    observer.observe(counter);
-  });
+
+  /* =============================== */
+  /* STORIES AUTO SCROLL (Mobile) */
+  /* =============================== */
+
+  const container = document.querySelector(".stories-container");
+
+  if (container) {
+    let scrollAmount = 0;
+
+    function autoScroll() {
+      if (window.innerWidth <= 768) {
+        scrollAmount += 0.5;
+        container.scrollLeft = scrollAmount;
+
+        if (scrollAmount >= container.scrollWidth - container.clientWidth) {
+          scrollAmount = 0;
+        }
+      }
+    }
+
+    setInterval(autoScroll, 20);
+  }
 
 });
-
-const container = document.querySelector(".stories-container");
-
-let scrollAmount = 0;
-
-function autoScroll() {
-  if (window.innerWidth <= 768) {
-    scrollAmount += 0.5; // smooth speed
-    container.scrollLeft = scrollAmount;
-
-    if (scrollAmount >= container.scrollWidth - container.clientWidth) {
-      scrollAmount = 0;
-    }
-  }
-}
-
-setInterval(autoScroll, 20);
 
 
 
